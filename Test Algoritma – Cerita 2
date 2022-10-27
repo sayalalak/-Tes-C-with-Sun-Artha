@@ -1,0 +1,57 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int A;
+		int B;
+		int i = 1;
+		int C;
+		while(i<=500)
+		{
+			A=i; 
+			i++;
+			B=i; 
+			i++;
+			C=i;
+			i++;
+			if(A%3==0){
+				Console.WriteLine("A = tik");
+			}
+			else if(A%5==0){
+				Console.WriteLine("A = tek");
+			}
+			else if(A%7==0){
+				Console.WriteLine("A = tok");
+			}
+			else{
+				Console.WriteLine("A = " + A);
+			}
+			if(B%3==0){
+				Console.WriteLine("B = tik");
+			}
+			else if(B%5==0){
+				Console.WriteLine("B = tek");
+			}
+			else if(B%7==0){
+				Console.WriteLine("B = tok");
+			}
+			else{
+				Console.WriteLine("B = " + B);
+			}
+			if(C%3==0){
+				Console.WriteLine("C = tik");
+			}
+			else if(C%5==0){
+				Console.WriteLine("C = tek");
+			}
+			else if(C%7==0){
+				Console.WriteLine("C = tok");
+			}
+			else{
+				Console.WriteLine("C = " + C);
+			}
+		}
+	}
+}

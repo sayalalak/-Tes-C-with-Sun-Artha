@@ -1,0 +1,39 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int A;
+		int B;
+		int i = 1;
+		int C;
+		int j;
+		Console.WriteLine("Hello World");
+		while(i<=500)
+		{
+			A=i; 
+			i++;
+			B=i; 
+			i++;
+			if(A%3==0){
+				Console.WriteLine("A = tik");
+			}
+			else if(A%5==0){
+				Console.WriteLine("A = tek");
+			}
+			else{
+				Console.WriteLine("A = " + A);
+			}
+			if(B%3==0){
+				Console.WriteLine("B = tik");
+			}
+			else if(B%5==0){
+				Console.WriteLine("B = tek");
+			}
+			else{
+				Console.WriteLine("B = " + B);
+			}
+		}
+	}
+}

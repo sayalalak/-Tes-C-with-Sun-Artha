@@ -7,7 +7,6 @@ public class Program
 		int A;
 		int B;
 		int i = 1;
-		int C;
 		int j;
 		Console.WriteLine("Hello World");
 		while(i<=500)

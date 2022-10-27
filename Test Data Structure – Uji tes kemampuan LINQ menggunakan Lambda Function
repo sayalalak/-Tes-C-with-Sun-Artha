@@ -1,0 +1,42 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class listMobil {
+	public int IDRegistrasi { get; set; }
+ 	public string Tipe { get; set; }
+	public string Merk { get; set; }
+	public string Varian { get; set; }
+}
+
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		IEnumerable<listMobil> ListMobil= new listMobil[] {
+ 			new listMobil { IDRegistrasi = 0001, Tipe = "Sedan", Merk = "Toyota", Varian= "FT86"},
+ 			new listMobil { IDRegistrasi = 0002, Tipe = "SUV", Merk = "Toyota", Varian = "RAV4"},
+ 			new listMobil { IDRegistrasi = 0003, Tipe = "Sedan", Merk = "Honda", Varian = "Accord"},
+ 			new listMobil { IDRegistrasi = 0004, Tipe = "SUV", Merk = "Honda", Varian = "CRV"}, 
+			new listMobil { IDRegistrasi = 0005, Tipe = "Sedan", Merk = "Honda", Varian = "City"},
+		};
+ 	// Isi code dibawah
+		//No. 1
+		IEnumerable<listMobil> satu = ListMobil.Where(m => m.Merk=="Honda");
+		listMobil a = satu.First();
+		Console.WriteLine("1. {0} - {1} - {2}", a.IDRegistrasi, a.Merk, a.Varian);
+		//No. 2
+		IEnumerable<listMobil> dua = ListMobil.Where(m => m.Merk=="Honda" && m.Tipe=="Sedan");
+		listMobil b = dua.LastOrDefault();
+		Console.WriteLine("2. {0} - {1} - {2}", b.IDRegistrasi, b.Merk, b.Varian);
+		//No. 3
+		IEnumerable<listMobil> tiga = ListMobil.Where(m => m.Merk=="Honda" && m.Varian=="City");
+		listMobil c = dua.FirstOrDefault();
+		Console.WriteLine("3. {0} - {1} - {2}", c.IDRegistrasi, c.Merk, c.Varian);
+		//No. 4
+		IEnumerable<listMobil> empat = ListMobil.Where(m => m.Merk=="Toyota");
+		foreach(listMobil d in empat){
+			Console.WriteLine("4. {0} - {1} - {2}", d.IDRegistrasi, d.Merk, d.Varian);
+		}
+	}
+}
